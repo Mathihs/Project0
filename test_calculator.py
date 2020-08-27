@@ -1,4 +1,5 @@
 import calculator
 
 def test_add():
-    assert calculator.add(1,2) == 3
+    tol = 1e-10
+    assert calculator.add(0.1, 0.2) <= 0.3 + tol
