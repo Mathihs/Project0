@@ -31,17 +31,6 @@ def test_cos():
     x = 3.14; N = 10
     assert calculator.cos(x,N) <= 1 + tol
 
-def test_to_float_gives_correct_instance():
-    assert isinstance(calculator.to_float(1), float)
-
-def test_to_float_return_correct_value():
-    x = 1
-    assert abs(calculator.to_float(x) - x) < 1e-12
-
-def test_is_float_raises_ValueError_for_string_arguments():
-    with pytest.raises(ValueError):
-        calculator.to_float("Hello")
-
 def test_if_add_raises_TypeError():
     with pytest.raises(TypeError):
         calculator.add(3, "Hello")
